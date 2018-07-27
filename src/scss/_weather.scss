@@ -1,0 +1,59 @@
+.Weather {
+    width: 500px;
+    margin: auto;
+    margin-top: 150px;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    transition: .5s all;
+
+    &__country {
+        color: $color-white;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+
+    &__icons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 35px;
+        transition: .5s all ease;
+        outline: solid 1px $color-white;
+        outline-offset: 10px;
+        cursor: pointer;
+
+        &:not(:first-of-type) {
+            margin-left: 1.5rem;
+        }
+
+        &:hover {
+            outline-width: 5px;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        
+        &:not(:first-of-type) {
+            margin-left: 2rem;
+        }
+
+        & input {
+            display: none;
+
+            &:after {
+                content: "";
+                width: 300px;
+            }
+
+            &:checked .Weather::after  {
+                
+            }
+        }
+
+    }
+}

@@ -1,0 +1,113 @@
+.App {
+  overflow: hidden;
+}
+
+.App-form {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 1rem;
+}
+
+.App__input {
+  position: relative;
+  padding: 1rem;
+  font-weight: bold;
+  color: #e93651;
+  border: 2px solid #e93651;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.App__input:focus {
+  border: none;
+  -webkit-box-shadow: 0 3px 1px #e93651;
+          box-shadow: 0 3px 1px #e93651;
+}
+
+.App__input:placeholder-shown ~ label {
+  top: 15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.App__label {
+  position: absolute;
+  left: 15px;
+  top: 3.5rem;
+  font-weight: bold;
+  color: #e93651;
+  z-index: 1;
+  visibility: visible;
+  -webkit-transition: .6s all;
+  transition: .6s all;
+}
+
+.Weather {
+  width: 500px;
+  margin: auto;
+  margin-top: 150px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff7f50), to(#e93651));
+  background-image: linear-gradient(to right bottom, #ff7f50, #e93651);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.Weather__country {
+  color: #ffffff;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.Weather__icons {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Weather__icon {
+  width: 35px;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+  outline: solid 1px #ffffff;
+  outline-offset: 10px;
+  cursor: pointer;
+}
+
+.Weather__icon:not(:first-of-type) {
+  margin-left: 1.5rem;
+}
+
+.Weather__icon:hover {
+  outline-width: 5px;
+}
+
+.Weather__checkbox {
+  position: relative;
+}
+
+.Weather__checkbox:not(:first-of-type) {
+  margin-left: 2rem;
+}
+
+.Weather__checkbox input {
+  display: none;
+}
+
+.Weather__checkbox input:after {
+  content: "";
+  width: 300px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=main.css.map */

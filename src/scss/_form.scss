@@ -1,0 +1,39 @@
+.App {
+    overflow: hidden;
+
+    &-form {
+        @include centerX;
+        margin-top: 1rem;
+    }
+
+    &__input {
+        position: relative;
+        padding: 1rem;
+        font-weight: bold;
+        color: $color-secondary;
+        border: 2px solid $color-secondary;
+        transition: .5s all;
+
+        &:focus {
+            border: none;
+            box-shadow: 0 3px 1px $color-secondary;
+        }
+
+        &:placeholder-shown ~ label {
+            top: 15px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 15px;
+        top: 3.5rem;
+        font-weight: bold;
+        color: $color-secondary;
+        z-index: 1;
+        visibility: visible;
+        transition: .6s all;
+    }
+}
